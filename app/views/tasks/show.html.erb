@@ -1,0 +1,19 @@
+<h1>- <%= @task.title %></h1>
+<ul class="list-inline">
+<li>
+<p><i><%= @task.details %></i></p>
+  <% if @task.completed%>
+    <i class='fa-solid fa-square-check'></i>
+  <% else %>
+    <i class='fa-regular fa-square'></i>
+  <% end %>
+  </li>
+  <li><p>Done ?</p>
+
+</ul>
+
+<br>
+<%= link_to "Update", edit_task_path, type: "button", class: "btn btn-warning" %>
+<br>
+<br>
+<%= link_to "🏠", tasks_path, type: "button", class: "btn btn-primary" %>

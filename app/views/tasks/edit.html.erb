@@ -1,0 +1,13 @@
+<div class = "form-control form-label">
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.check_box :completed %>
+<%= f.label :completed, "done ?" %>
+  <%= f.submit %>
+<% end %>
+</div>
+
+<%= link_to "🏠", tasks_path, type: "button", class: "btn btn-primary" %>
